@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Jquery.js"></script>
+</head>
+<style>
+   table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background:#4CAF50;
+    color: white;
+    
+}
+td {
+    border-bottom: 1px solid #23b15e;
+    color: #333;
+}
+tr:last-child td {
+    border-bottom: none;
+}
+tr:hover {
+    background: #3d3953;
+}
+caption {
+    caption-side: top;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #0078d7;
+}
+/* Product input form styling */
+.container {
+    display: flex;
+    gap: 18px;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 32px auto 24px auto;
+    flex-wrap: wrap;
+    /*background: #fff;*/
+    padding: 24px 20px 18px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(136, 153, 136, 0.514);
+    max-width: 600px;
+}
+/* Student Form Styling */
+.Form-student {
+    background: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 28px 32px 24px 32px;
+    max-width: 340px;
+    margin: 32px auto 24px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.Form-student label {
+    font-weight: 600;
+    color: #2d3a4a;
+    margin-bottom: 6px;
+}
+.Form-student input[type="text"] {
+    padding: 10px 12px;
+    border: 1.5px solid #b3c2d6;
+    border-radius: 7px;
+    font-size: 1em;
+    outline: none;
+    margin-bottom: 8px;
+    transition: border 0.2s;
+    background: #fff;
+    color: #2d3a4a;
+}
+.Form-student input[type="text"]:focus {
+    border: 1.5px solid #1976d2;
+    background: #f0f6ff;
+}
+.box-item{
+    font-weight: 500;
+    color: #7b9fc4;
+    margin-bottom: 4px;
+    display: block;
+}
+.product-form input[type="hello"],
+.product-form input[type="number"] {
+    padding: 8px 10px;
+    border: 1px solid #db4fb8;
+    border-radius: 6px;
+    font-size: 1em;
+    outline: none;
+    transition: border 0.2s;
+    min-width: 120px;
+    margin-bottom: 0;
+}
+.product-form input[type="text"]:focus,
+.product-form input[type="number"]:focus {
+    border: 1.5px solid #5a6a79;
+}
+.product-form input[type="button"] {
+    background: #869eb6;
+    color: #b30404;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-left: 6px;
+}
+.product-form input[type="button"]:hover {
+    background: #125ea7;
+}
+@media (max-width: 700px) {
+    .product-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .product-form input[type="button"] {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+table {
+    width: 60%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.1em;
+   /* background: #fff;*/
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-radius: 10px;
+    overflow: hidden;
+}
+thead tr, table > tr:first-child {
+    background: #8e9dac41;
+    color: #cbdfe9;
+}
+th, td {
+    padding: 14px 12px;
+    text-align: left;
+}
+tbody tr:nth-child(even) {
+    background: #1eca6b;
+}
+tbody tr:hover {
+    background: hsl(222, 11%, 69%);
+}
+th {
+    font-weight: 600;
+}
+tbody th {
+    color: #1976d2;
+    background: #0adf4a;
+    font-weight: 500;
+}
+.btn ,.btnEdit ,.btnDelete{
+    padding: 8px 16px;
+    background-color: blue;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0,3s ease;
+}
+.btn:hover {
+    background-color: blue;
+}
+.btn:active {
+    background-color: blue;
+}
+.container .box:nth-child(2){
+   
+}
+</style>
+</style>
+<body>
+    <input type="button" value="Add" class="btn">
+     <table >
+        <tr>
+        
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+           <th>Phone</th> 
+         
+        </tr>
+        <tbody>
+            <tr>
+                 <td>1</td>
+                 <td>Jonh</td>
+                 <td>Jonh@gamil.com</td>
+                 <td>1234566</td>
+            </tr>
+            <tr>
+                 <td>1</td>
+                 <td>Jonh</td>
+                 <td>Jonh@gamil.com</td>
+                 <td>1234566</td>
+            </tr>
+            <tr>
+                 <td>1</td>
+                 <td>Jonh</td>
+                 <td>Jonh@gamil.com</td>
+                 <td>1234566</td>
+            </tr>
+            <tr>
+                 <td>1</td>
+                 <td>Jonh</td>
+                 <td>Jonh@gamil.com</td>
+                 <td>1234566</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    <div class="container">
+        <div class="box">
+
+        </div>
+        <div class="box">
+
+        </div>
+        <div class="box">
+
+        </div>
+        <div class="box">
+
+        </div>
+
+    </div>
+</body>
+<script>
+    $(function(){
+        var btn= $('.btn');
+        var table= $('table');
+
+        btn.click(function(){
+            table.find("tr").eq(2).css("background-color","red");
+            table.find("tr").eq(3).css("background-color","yellow");
+            table.find("tr").eq(1).css("background-color","yellow");
+            table.find("tr").eq(4).css("background-color","pink");
+        })
+
+    })
+
+
+    
+
+</script>
+</html>

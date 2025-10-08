@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        
+      table {
+        border-collapse: collapse;
+        width: 60%;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+      tr:hover {
+        background-color: #ddd;
+      }
+      .btn, .btnEdit {
+        padding: 8px 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+      .btnDelete {
+        padding: 8px 16px;
+        background-color: #ff0022;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+      }
+      .btn:hover, .btnEdit:hover, .btnDelete:hover {
+        background-color: #0056b3;
+      }
+      .btn:active, .btnEdit:active, .btnDelete:active {
+        background-color: #0056b3;
+      }
+      .Form-student {
+        width: 60%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .Form-student label {
+        display: block;
+        margin-bottom: 4px;
+        font-weight: bold;
+        color: #333;
+        font-family: Arial, sans-serif;
+      }
+      .Form-student input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 4px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+      }
+      .Form-student input[type="text"]:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+      }
+      .error-text {
+        color: red;
+        font-size: 12px;
+        margin-bottom: 10px;
+        display: none;
+      }
+    
+    </style>
+</head>
+<body>
+    <body class="">
+    <div class="Form-student">
+      <input type="hidden" id="id" value="1">
+      <input type="hidden" id="editIndex" value="0">
+      <input type="hidden" id="oldName" value="Raman Sous">
+      <input type="hidden" id="oldEmail" value="raman.angkorwat@gmail.com">
+      <input type="hidden" id="oldPhone" value="09876e43">
+
+      <label>Name</label>
+      <input type="text" id="name">
+      <div class="error-text" id="error-name" style="display: none;">សូមបញ្ចូលឈ្មោះ</div>
+
+      <label>Email</label>
+      <input type="text" id="email">
+      <div class="error-text" id="error-email" style="display: none;">សូមបញ្ចូលអ៊ីមែល</div>
+
+      <label>Phone</label>
+      <input type="text" id="phone">
+      <div class="error-text" id="error-phone" style="display: none;">សូមបញ្ចូលលេខទូរស័ព្ទ</div>
+
+      <button type="button" class="btn btn-primary" id="addBtn">UPDATE</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="result">
+             <tr>
+                    <td>1</td>
+                    <td>Raman Sous</td>
+                    <td>raman.angkorwat@gmail.com</td>
+                    <td>09876e43</td>
+                    <td>
+                        <button class="btnEdit">Edit</button>
+                        <button class="btnDelete">Delete</button>
+                        
+                    </td>
+                </tr>
+            </tbody>
+    </table>
+</body>
+<script>
+    
+      $(function () {
+        var id = $("#id");
+        var editIndex = $("#editIndex");
+
+        $("#addBtn").click(function () {
+          var name = $("#name").val().trim();
+          var email = $("#email").val().trim();
+          var phone = $("#phone").val().trim();
+
+          var valid = true;
+
+          // Validate Name
+          if (name === "") {
+            $("#error-name").show();
+            valid = false;
+          } else {
+            $("#error-name").hide();
+          }
+
+          // Validate Email
+          if (email === "") {
+            $("#error-email").show();
+            valid = false;
+          } else {
+            $("#error-email").hide();
+          }
+
+          // Validate Phone
+          if (phone === "") {
+            $("#error-phone").show();
+            valid = false;
+          } else {
+            $("#error-phone").hide();
+          }
+
+          if (!valid) return;
+
+          if (editIndex.val() !== "") {
+            // Check if changes were made
+            if (
+              name === $("#oldName").val() &&
+              email === $("#oldEmail").val() &&
+              phone === $("#oldPhone").val()
+            ) {
+              Swal.fire({
+                icon: "info",
+                title: "No Changes",
+                text: "No changes were made to the record."
+              });
+              return;
+            }
+
+            // Update row
+            var row = $("#result tr").eq(editIndex.val());
+            row.find("td").eq(1).text(name);
+            row.find("td").eq(2).text(email);
+            row.find("td").eq(3).text(phone);
+
+            editIndex.val("");
+            $("#addBtn").text("ADD");
+
+            Swal.fire({
+              icon: "success",
+              title: "Updated!",
+              text: "Student record has been updated successfully."
+            });
+
+          } else {
+            // Add new row
+            var number = parseInt(id.val()) + 1;
+            id.val(number);
+
+            var row = `
+                <tr>
+                    <td>${number}</td>
+                    <td>${name}</td>
+                    <td>${email}</td>
+                    <td>${phone}</td>
+                    <td>
+                        <button class="btnEdit">Edit</button>
+                        <button class="btnDelete">Delete</button>
+                    </td>
+                </tr>
+            `;
+            $("#result").prepend(row);
+
+            Swal.fire({
+              icon: "success",
+              title: "Added!",
+              text: "Student record has been added successfully."
+            });
+          }
+
+          // Clear input
+          $("#name").val("");
+          $("#email").val("");
+          $("#phone").val("");
+        });
+
+        // Edit
+        $(document).on("click", ".btnEdit", function () {
+          var row = $(this).closest("tr");
+          var index = row.index();
+          editIndex.val(index);
+
+          var name = row.find("td").eq(1).text();
+          var email = row.find("td").eq(2).text();
+          var phone = row.find("td").eq(3).text();
+
+          $("#name").val(name);
+          $("#email").val(email);
+          $("#phone").val(phone);
+
+          // Store old values to compare later
+          $("#oldName").val(name);
+          $("#oldEmail").val(email);
+          $("#oldPhone").val(phone);
+
+          $("#addBtn").text("UPDATE");
+        });
+
+        // Delete
+        $(document).on("click", ".btnDelete", function () {
+          var row = $(this).closest("tr");
+          Swal.fire({
+            title: "Are you sure?",
+            text: "Do you want to delete this record?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Yes, delete it",
+            cancelButtonText: "No",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              row.remove();
+              Swal.fire(
+                "Deleted!",
+                "This record has been deleted successfully.",
+                "success"
+              );
+            }
+          });
+        });
+      });
+    
+   
+</script>
+</html>

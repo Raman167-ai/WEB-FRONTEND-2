@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .menu-container{
+        width: 70%;
+        overflow: hidden;
+        margin: auto;
+        background-color: red;
+    }
+    .menu-container ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu-container ul li{
+        float: left;
+    }
+    .menu-container ul li a{
+        display: block;
+        padding: 20px;
+        text-transform:uppercase ;
+        text-decoration: none;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: white;
+    }
+    .sub-menu {
+       width:100px ; 
+       overflow: hidden;
+       background-color: green;
+       position: absolute;
+       opacity: 0;
+       transform: rotateY(20px);
+       transition: all 0.3s ease;
+    }
+    .menu-container ul li:hover .sub-menu{
+        opacity: 1;
+        transform: rotateY(0);
+    }
+</style>
+<body>
+    <div class ="menu-container">
+     <!--<ul>
+        <li>
+            <a href="">HTML</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="#">HTML1</a></li>
+                    <li><a href="#">HTML2</a></li>
+                    <li><a href="#">HTML3</a></li>
+                </ul>
+
+            </div>
+        </li>
+      </ul> 
+      <ul>
+        <li>
+            <a href="">HTML</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="#">HTML1</a></li>
+                    <li><a href="#">HTML2</a></li>
+                    <li><a href="#">HTML3</a></li>
+                </ul>
+
+            </div>
+        </li>
+      </ul> 
+      <ul>
+        <li>
+            <a href="">HTML</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="#">HTML1</a></li>
+                    <li><a href="#">HTML2</a></li>
+                    <li><a href="#">HTML3</a></li>
+                </ul>
+
+            </div>
+        </li>
+      </ul> 
+      <ul>
+        <li>
+            <a href="">HTML</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="">HTML1</a></li>
+                    <li><a href="">HTML2</a></li>
+                    <li><a href="">HTML3</a></li>
+                </ul>
+
+            </div>
+        </li>
+      </ul> 
+      <ul>
+        <li>
+            <a href="">HTML</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="">HTML1</a></li>
+                    <li><a href="">HTML2</a></li>
+                    <li><a href="">HTML3</a></li>
+                </ul>
+
+            </div>
+        </li>
+      </ul>-->
+    </div>
+</body>
+ <script>
+    //index array
+    // index       
+   var subject = [
+    {
+        menu:"HTML",
+        link:"https://www.w3schools.com/html/default.asp",
+        submenu:[
+            {
+                submenu:"HTML1",
+                link:"https://www.w3schools.com/html/default.asp"
+            },
+            {
+                submenu:"HTML2",
+                link:"https://www.zandokh.com/men"
+            },
+            {
+                submenu:"HTML3",
+                link:"https://www.bing.com/images/search?q=angkor+wat+map&form=IVCLTL&first=1"
+            }
+        ]
+    },
+    {
+        menu:"CSS",
+        link:"https://www.w3schools.com/css/default.asp",
+        submenu:[
+            {
+                submenu:"CSS1",
+                link:"https://www.w3schools.com/css/default.asp"
+            },
+            {
+                submenu:"CSS2",
+                link:"https://news.ssbcrack.com/thailand-and-cambodia-agree-to-ceasefire-amid-border-conflict/"
+            },
+            {
+                submenu:"CSS3",
+                link:"https://www.nytimes.com/2025/07/24/world/asia/thailand-cambodia-deadly-border-clash.html"
+            }
+        ]
+    },
+    {
+        menu:"JS",
+        link:"https://www.w3schools.com/js/default.asp",
+        submenu:[
+            {
+                submenu:"JS1",
+                link:"https://www.w3schools.com/js/default.asp"
+            },
+            {
+                submenu:"JS2",
+                link:"https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Framan.guide%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExMUlxTjVDdnlhQVhFNkF2aQEeXc4IjhoXSiH0qCS_rfg8sW16PRWva4gX0UHsuyvtROpsXqA0YUh2HVrAK2o_aem_xsZb1kJ5UyZTavyMpNyO2A&h=AT1NyOmNRDN750B5VRO-_0GaGJxLHVtEhcpPSTvvtqdyDHTox5RXHgjlnDUWekO8bV-0oAlmw97X77tf4Skj0CZ5W1HT0r7RziCQbz8z7bOf8FCA-3UW62eu4YDpz8ZWkDaf"
+            },
+            {
+                submenu:"JS3",
+                link:"https://www.w3schools.com/"
+            }
+        ]
+    },
+    {
+        menu:"PHP",
+        link:"https://www.w3schools.com/php/default.asp",
+        submenu:[
+            {
+                submenu:"PHP1",
+                link:"https://www.w3schools.com/php/default.asp"
+            },
+            {
+                submenu:"PHP2",
+                link:"https://uiverse.io/"
+            },
+            {
+                submenu:"PHP3",
+                link:"https://fontawesome.com/icons"
+            }
+        ]
+    },
+    {
+        menu:"MYSQL",
+        link:"https://www.w3schools.com/sql/default.asp",
+        submenu:[
+            {
+                submenu:"MYSQL1",
+                link:"https://www.w3schools.com/sql/default.asp"
+            },
+            {
+                submenu:"MYSQL2",
+                link:"https://fontawesome.com/icons/categories/design"
+            },
+            {
+                submenu:"MYSQL3",
+                link:"#"
+            }
+        ]
+    },
+    {
+        menu:"PYTHON",
+        link:"https://www.w3schools.com/python/default.asp",
+        submenu:[
+            {
+                submenu:"PYTHON1",
+                link:"https://www.w3schools.com/python/default.asp"
+            },
+            {
+                submenu:"PYTHON2",
+                link:"#"
+            },
+            {
+                submenu:"PYTHON3",
+                link:"#"
+            }
+        ]
+    },
+    {
+        menu:"JAVA",
+        link:"https://www.w3schools.com/java/default.asp",
+        submenu:[
+            {
+                submenu:"JAVA1",
+                link:"https://www.w3schools.com/java/default.asp"
+            },
+            {
+                submenu:"JAVA2",
+                link:"#"
+            },
+            {
+                submenu:"JAVA3",
+                link:"#"
+            }
+        ]
+    },
+    {
+        menu:"C++",
+        link:"https://www.w3schools.com/cpp/default.asp",
+        submenu:["C++1", "C++2", "C++3"]
+    },
+     {
+        menu:"HOW TO",
+        link:"https://www.w3schools.com/howto/default.asp",
+        submenu:[
+            {
+                submenu:"HOW TO1",
+                link:"https://www.w3schools.com/howto/default.asp"
+            },
+            {
+                submenu:"HOW TO2",
+                link:"#"
+            },
+            {
+                submenu:"HOW TO3",
+                link:"#"
+            }
+        ]
+    },
+]
+    var item = "";
+    for(var i=0; i<subject.length ; i++){
+        var submenulist= subject[i].submenu;// Loop through the submenu array html1, html2, html3
+        var obj="";
+        for (var j=0 ; j<submenulist.length; j++){
+            obj = obj + `
+             <li>
+             <a href="${submenulist[j].link}">${submenulist[j].submenu}</a>
+             </li>
+            `;
+
+           //console.log(submenulist[j]);
+        }
+        console.log(obj);
+       // alert(subject[i].submenu);
+
+       
+        //loop item menu
+        item = item +` 
+        <li>
+            <a href="${subject[i].link}">${subject[i].menu}</a>
+            <div class="sub-menu">
+                <ul>
+                    ${obj}
+                </ul>
+
+            </div>
+        </li>
+        `;
+       // console.log(item)
+        
+    }
+    //return the item to the menu container
+    document.querySelector(".menu-container").innerHTML = `<ul>${item}</ul>`;
+   </script>
+</html>

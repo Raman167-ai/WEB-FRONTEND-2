@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .menu-container{
+        width: 70%;
+        overflow: hidden;
+        margin: auto;
+        background-color: red;
+    }
+    .menu-container ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu-container ul li{
+        float: left;
+    }
+    .menu-container ul li a{
+        display: block;
+        padding: 20px;
+        text-transform:uppercase ;
+        text-decoration: none;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: white;
+    }
+     .sub-menu {
+       width:100px ; 
+       overflow: hidden;
+       background-color: green;
+       position: absolute;
+       opacity: 0;
+       transform: rotateY(20px);
+       transition: all 0.3s ease;
+    }
+    .menu-container ul li:hover .sub-menu {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+</style>
+<body>
+    <div class="menu-container">
+        <!--<ul>
+            <li>
+                <a href="">HTML</a>
+                
+            </li>
+            <li>
+                <a href="">HTML</a>
+            </li>
+            <li>
+                <a href="">HTML</a>
+            </li>
+            <li>
+                <a href="">HTML</a>
+            </li>
+            <li>
+                <a href="">HTML</a>
+            </li>
+            <li>
+                <a href="">HTML</a>
+            </li>
+        </ul>-->
+
+    </div>
+</body>
+<script>
+    //index array
+    // index        0       1       2     3     5       6
+    var subject = ["HTML", "CSS", "JS", "PHP","MYSQL","PYTHON", "JAVA", "C++"];
+    var item = "";
+    //console.log(subject);
+    for(var i=0; i<subject.length ; i++){
+        item = item +` 
+        <li>
+            <a href="https://www.zandokh.com/men">${subject[i]} </a>
+        </li>
+        `;
+        console.log(item)
+        
+    }
+    document.querySelector(".menu-container").innerHTML = `<ul>${item}</ul>`;
+        //console.log(subject[i])
+    //}
+    //console.log(subject[0])
+    //console.log(subject[1])
+   // console.log(subject[2])
+   // console.log(subject[3])
+   // console.log(subject[4]) //undefined, because there is no index 4 in the array
+   //console.log(subject.length); //4, because there are 4 elements in the array
+//for (var i=0;i<10;i++){
+   // console.log(i)
+//}
+//for (var i=0;i<5;i++){
+//    console.log(subject[i])
+//}
+   </script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <input type="button" value="Click me" id="btn">
+</body>
+    <script>
+        //1
+       // document.getElementById("btn").addEventListener("click",function(){
+       //    alert(1)
+        //})
+        //2
+       // document.querySelector('.btn').addEventListener('click',function(){
+         //   alert(1)
+        //})
+        //document.getElementById('btn').onclick= function(){
+        //    alert(1)
+        //}
+        document.getElementById('btn').onclick= function(){
+        var value = Sum(50,50)
+        console.log(value);
+        alert(value);
+       
+        }
+        function Sum(a,b){
+           console.log(a+b)
+            return a+b;
+        }
+        
+       //document.getElementById('btn').onclick= function(){
+         //  var Result = CalOTAM(30,300,26,8);
+        //    console.log(Result);
+        // }
+        // function CalOTAM(OThour,Salary,workday,Workhour){
+          //  var rateperhour = Salary / workday / workhour;
+         //   var OTAmount = (OThour * rateperhour) * 2;
+        //    return OTAmount,
+        // }
+        
+     </script>
+</html>

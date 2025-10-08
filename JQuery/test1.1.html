@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"> 
+
+</head>
+<style>
+    .box{
+        width: 100%;
+        height: 80px;
+        /*background-color: red;*/
+        margin: 20px;
+    }
+    .box-menu{
+        width: 80%;
+        height: 40px;
+        display:flex;
+        margin: 20px;
+    }
+    .box-menu ul,li,a,i{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: violet;
+    }
+
+</style>
+<body>
+    <div class="box">
+        <div class="box-menu">
+            <ul>
+                <li>
+                  <a href="" style="color: yellow;">សង្គម</a>
+                  <i class="fa-solid fa-car"></i>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                  <a href=""style="color:blue;">សេដ្ឌកិច្ច</a><i class="fa-solid fa-bars"></i>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                  <a href="https://www.tripadvisor.com/Attractions-g608455-Activities-Kampot_Kampot_Province.html"><h2 style="color: green;">kompot</h2></a><i class="fa-solid fa-bars"></i>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div> 
+    <input type="button" id="btn" value="show">
+    <input type="button" id="btn1" value="hide">
+    <input type="button" id="btn2" value="hide/show">
+</body>
+
+<script>
+    
+   $(document).ready(function(){
+    $('#btn').click(function(){
+        let text = $('#text1').val("hello");
+        console.log(text);
+    })
+   })
+    
+    var btn = document.getElementById('btn');
+    btn.onclick=function(){
+    
+    }
+    $('#btn1').click(function(){
+        $('.box').hide();
+    })
+</script>
+</html>

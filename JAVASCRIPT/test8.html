@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;    
+        align-items: center;
+        align-items: center;
+        }
+    .switch-container{
+        width: 350px;
+        height: 130px;
+        background-color:beige;  
+        border-radius: 70px;
+        transition: 0.5s;
+      }
+    .btn-swith{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(43, 48, 46);
+        border-radius: 50%;
+        position: relative;
+        transition: 0.5s;
+        top: 15px;
+        left: 15px;
+    }
+</style>
+<body>
+    <input type="password" id="username"><input type="checkbox">show password
+     <!-- <input type="password" id="password" placeholder="Enter Password">-->
+    <!--<div>
+    <div class="switch-container">
+        <div class="btn-swith"></div>
+    </div>-->
+</div>
+    
+</body>
+<script>
+    var btn_switch = document.querySelector('.btn-swith');
+    var switch_container = document.querySelector('.switch-container');
+    var IsOn = true
+    btn_switch.onclick = function(){
+        if(btn_switch.style.left == '15px'){
+            btn_switch.style.left = '200px';
+            btn_switch.style.backgroundColor = 'green';
+            switch_container.style.backgroundColor = 'lightblue';
+            IsOn = false
+        }
+        else{
+            btn_switch.style.left = '15px';
+            btn_switch.style.backgroundColor = 'red';
+            switch_container.style.backgroundColor = 'beige';
+             IsOn = true;
+        }
+        IsOn = !IsOn;
+    }
+</script>
+</html>

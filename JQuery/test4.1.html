@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Jquery.js"></script>
+</head>
+<style>
+.box{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    background-color: black;
+}
+.box1{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin: 20px;
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 20px;
+}
+.container{
+    width: 500px;
+    height: 500px;
+    background-color: gray;
+    margin: 20px;
+}
+
+</style>
+<body>
+    <div class="box">
+        <div class="box1">
+            <div class="box2">
+                <input type="button" class="btn" value="Click">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <center><h1>Parent Container</h1></center>
+        <div class="box1">
+            <h2>This is my style</h2>
+            <div class="box2">
+                <input type="button" class="btn" value="Click 1">
+            </div>
+        </div>
+    </div>
+  
+</body>
+<script>
+    $(function(){
+        var btn= $('.btn').parents('.box');
+        var btn1 = $('.btn').parents('.container');
+       
+        btn.click(function(){
+            alert(1);
+            $(this).css('background-color','yellow');
+            $(this).find('.box1').css('background-color','green');
+            $(this).find('.box2').css('background-color','blue');
+        })
+
+
+        btn1.click(function(){
+            alert(2)
+            $(this).css('background-color','orange');
+            $(this).find('.box1').css('background-color','pink');
+            $(this).find('.box2').css('background-color','purple');
+            $(this).find('h2').css('color','white');
+            $(this).find('h1').css('color','blue');
+        })
+
+
+    })
+  
+</script>
+</html>

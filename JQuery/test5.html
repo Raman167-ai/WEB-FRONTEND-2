@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Jquery.js"></script>
+</head>
+<style>
+    .box ,.box2,.box1{
+        width: 80px;
+        height: 80px;
+        background-color: green;
+        margin:20px ;
+        float: left;
+    }
+</style>
+<body>
+    <div class="box">
+
+    </div>
+     <div class="box1">
+
+    </div>
+     <div class="box2">
+
+    </div>
+     <div class="box3">
+
+    </div>
+    <input type="button" value="click me" class="btn">
+    <div class="box">
+
+    </div>
+</body>
+<script>
+    
+      function GetData(){
+        $.ajax({
+            url: "https://fakestoreapi.com/products",    // path ទៅ server
+            type: "GET",          // ប្រភេទសំណើ (GET / POST)
+            success: function(response) {
+                console.table(response[0].category); // បង្ហាញទិន្នន័យបានទទួល
+            },
+            error: function() {
+                console.log("មានបញ្ហាក្នុងការទាញទិន្នន័យ");
+            }
+        });
+    }
+
+</script>
+</html>
