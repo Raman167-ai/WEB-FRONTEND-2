@@ -1,0 +1,259 @@
+/* About Us Page - Modern, clean, restaurant-inspired style */
+body {
+    background: #f7fafd;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    margin: 0;
+}
+.padding-top {
+    padding-top: 110px;
+}
+.site-section.p-about {
+    padding: 48px 0 32px 0;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(25, 118, 210, 0.08);
+    max-width: 1100px;
+    margin: 0 auto 48px auto;
+}
+.about-img {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10);
+    background: #e3e9f7;
+}
+.about-img img {
+    width: 100%;
+    height: 2400px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+}
+.content-about {
+    padding: 0 0 0 18px;
+}
+.content-about h2 {
+    color: #1976d2;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+.content-about h3 {
+    color: #d2691e;
+    font-size: 1.3rem;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+.content-about p, .content-about q {
+    font-size: 1.08rem;
+    color: #333;
+    margin-bottom: 14px;
+    line-height: 1.7;
+}
+.content-about q {
+    display: block;
+    background: #f8fafc;
+    border-left: 5px solid #d2691e;
+    padding: 14px 24px 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    color: #1976d2;
+}
+@media (max-width: 900px) {
+    .site-section.p-about {
+        padding: 24px 2vw 18px 2vw;
+    }
+    .about-img img {
+        height: 220px;
+    }
+    .content-about {
+        padding: 0;
+    }
+}
+@media (max-width: 600px) {
+    .site-section.p-about {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 12px 0 8px 0;
+    }
+    .about-img img {
+        height: 140px;
+    }
+}
+/* aboutus.css - Modern, clean, and visually appealing styles for AboutUs.html */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f9f9f9;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+    color: #fff;
+    padding: 2rem 0 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+nav {
+    margin: 1.5rem 0 0 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #222;
+}
+
+main {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 2.5rem 2rem;
+}
+
+section {
+    margin-bottom: 2.5rem;
+}
+
+h2 {
+    color: #ffb347;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid #ffcc33;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.about-image {
+    flex: 1 1 260px;
+    min-width: 220px;
+    max-width: 340px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(255, 204, 51, 0.10);
+}
+
+.about-image img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.about-text {
+    flex: 2 1 340px;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.7;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.team-member {
+    background: #fffbe6;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(255, 204, 51, 0.08);
+    padding: 1.2rem 1rem;
+    text-align: center;
+    border: 1px solid #ffe082;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.team-member:hover {
+    box-shadow: 0 6px 24px rgba(255, 204, 51, 0.18);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.team-member img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.7rem;
+    border: 3px solid #ffcc33;
+}
+
+.team-member h3 {
+    margin: 0.5rem 0 0.2rem 0;
+    color: #e67e22;
+    font-size: 1.1rem;
+}
+
+.team-member p {
+    margin: 0.2rem 0 0.5rem 0;
+    color: #555;
+    font-size: 1rem;
+}
+
+.button {
+    background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255, 204, 51, 0.10);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #ffcc33 0%, #ffb347 100%);
+    color: #222;
+    transform: scale(1.04);
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1.2rem 0;
+    margin-top: 2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 1.2rem 0.5rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    .about-content {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}

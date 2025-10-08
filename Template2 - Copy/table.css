@@ -1,0 +1,234 @@
+:root{
+  --tbl-bg: #ffffff;
+  --tbl-foreground: #0f172a;         /* main text */
+  --tbl-muted: #6b7280;              /* secondary text */
+  --primary: #0d6efd;                /* border-primary default (Bootstrap-like) */
+  --accent: rgba(13,110,253,0.06);   /* row accent */
+  --radius: 10px;
+  --gap: 12px;
+  --shadow: 0 6px 18px rgba(15,23,42,0.06);
+  --header-gradient: linear-gradient(90deg, rgba(13,110,253,0.08), rgba(125,211,252,0.02));
+}
+
+/* Base table reset */
+.table{
+  width: 100%;
+  background: var(--tbl-bg);
+  color: var(--tbl-foreground);
+  border-collapse: separate; /* allow rounded corners on outer cells */
+  border-spacing: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size: 14px;
+  line-height: 1.45;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  overflow: hidden; /* clip rounded corners */
+}
+
+/* Table container for responsive horizontal scroll */
+.table-responsive{
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius);
+}
+
+/* Bordered style */
+.table-bordered{
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* primary border modifier */
+.table.border-primary,
+.table-bordered.border-primary{
+  --primary-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+/* Header */
+.table thead th{
+  text-align: left;
+  font-weight: 600;
+  padding: 14px var(--gap);
+  color: var(--tbl-foreground);
+  background: var(--header-gradient);
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+  position: sticky; /* optional sticky header in supported browsers */
+  top: 0;
+  backdrop-filter: blur(6px);
+}
+
+/* Body cells */
+.table tbody td{
+  padding: 12px var(--gap);
+  border-bottom: 1px solid rgba(15,23,42,0.04);
+  vertical-align: middle;
+  color: var(--tbl-foreground);
+}
+
+/* Zebra rows and row hover */
+.table tbody tr:nth-child(odd){
+  background: transparent;
+}
+.table tbody tr:nth-child(even){
+  background: var(--accent);
+}
+.table tbody tr:hover{
+  background: rgba(13,110,253,0.08);
+  transform: translateZ(0);
+}
+
+/* Small, subtle rounded corners for the very first/last cells to preserve outer radius */
+.table thead th:first-child { border-top-left-radius: var(--radius); }
+.table thead th:last-child  { border-top-right-radius: var(--radius); }
+.table tbody tr:last-child td:first-child  { border-bottom-left-radius: var(--radius); }
+.table tbody tr:last-child td:last-child   { border-bottom-right-radius: var(--radius); }
+
+/* Compact / small table variant */
+.table.table-sm thead th,
+.table.table-sm tbody td{
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+/* Utilities */
+.text-muted { color: var(--tbl-muted); font-size: 13px; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+
+/* Accessibility: focus state for rows/cells */
+.table tbody tr:focus-within,
+.table tbody tr:focus{
+  outline: 3px solid rgba(13,110,253,0.12);
+  outline-offset: -2px;
+}
+
+/* Responsive: convert table into stacked cards on very narrow screens (optional) */
+@media (max-width: 560px){
+  .table thead { display: none; }
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+  .table tbody tr {
+    margin-bottom: 10px;
+    background: var(--tbl-bg);
+    border: 1px solid rgba(15,23,42,0.04);
+    border-radius: 8px;
+    padding: 10px;
+  }
+  .table tbody td {
+    padding: 8px 10px;
+    border: none;
+  }
+  /* label each cell with pseudo-element using data-label attr (see HTML example) */
+  .table tbody td::before{
+    content: attr(data-label);
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--tbl-muted);
+    font-size: 13px;
+  }
+}
+
+.Image-containers{
+    width: 100%;
+    height: 500px;
+    /*background-color: black;*/
+    margin:10px auto;
+}
+.Image-containers .small-img{
+    width: 30%;
+    height: 100%;
+  /*  background-color: green;*/
+    float: left;
+    border-radius: 10px;
+    margin: 5px;
+}
+.Image-containers .big-img{
+    width: 60%;
+    height: 500px;
+    float: left;
+    margin-top: 3px;
+   /* background-color:violet;*/
+    
+}
+.Image-containers .small-img .box-image{
+    width: 100%;
+    height: 25%;
+    margin: 5px 0;
+    border-radius: 20px;
+  
+}
+.Image-containers .small-img .box-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+   
+}
+.Image-containers .big-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: calc(contain);
+}
+
+body {
+         
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f7fb;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 8px rgba(209, 159, 159, 0.164);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th {
+            background: #1976d2;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #1565c0;
+            
+        }
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e98f8f;
+        }
+        tbody tr:hover {
+            background: #a8bacc;
+        }
+        td img {
+            width: 200px;
+            margin: 10px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        td:nth-child(4) {
+            color: #56a55a;
+            font-weight: 600;
+        }
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+        @media (max-width: 868px) {
+            table {
+                width: 100%;
+            }
+            th, td {
+                padding: 10px;
+            }
+            td img {
+                width: 60px;
+                height: 60px;
+            }
+        }

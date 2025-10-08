@@ -1,0 +1,214 @@
+/* community.css - Modern, clean, and visually appealing styles for community.html */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+    color: #fff;
+    padding: 2rem 0 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+nav {
+    margin: 1.5rem 0 0 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #222;
+}
+
+main, .site-section.information {
+    max-width: 950px;
+    margin: 2.5rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 2.5rem 2rem;
+}
+
+h1, h2 {
+    color: #ffb347;
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 2px solid #ffcc33;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.community_indro {
+    font-size: 1.15rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    background: #fffbe6;
+    border-radius: 10px;
+    padding: 1.2rem 1rem;
+    box-shadow: 0 2px 8px rgba(255, 204, 51, 0.08);
+    border: 1px solid #ffe082;
+}
+
+.gallery-image {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.gallery-image .column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.gallery-image img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(255, 204, 51, 0.10);
+    border: 2px solid #ffecb3;
+    background: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gallery-image img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 24px rgba(255, 204, 51, 0.18);
+}
+
+.last-text-com {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #e67e22;
+    font-style: italic;
+}
+
+footer.footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0 1.2rem 0;
+    margin-top: 2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 0 0 12px 12px;
+}
+
+.footer h2 {
+    color: #ffb347;
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+}
+
+.footer a {
+    color: #ffb347;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.social-links a {
+    margin: 0 0.5rem;
+    color: #ffb347;
+    font-size: 1.3rem;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+.img_whatsapp {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #25d366 60%, #128c7e 100%);
+    border-radius: 50%;
+    box-shadow: 0 4px 24px rgba(37, 211, 102, 0.18);
+    padding: 7px;
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_whatsapp:hover {
+    box-shadow: 0 8px 32px rgba(18, 140, 126, 0.25);
+    background: linear-gradient(135deg, #128c7e 60%, #25d366 100%);
+    transform: scale(1.07);
+}
+
+.img_whatsapp img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2.5px solid #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    transition: box-shadow 0.2s, transform 0.2s;
+    background: #fff;
+}
+
+.img_whatsapp img:hover {
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.18);
+    transform: scale(1.10);
+}
+
+@media (max-width: 900px) {
+    .gallery-image {
+        flex-direction: column;
+        gap: 1.2rem;
+        align-items: center;
+    }
+    .gallery-image img {
+        width: 90vw;
+        max-width: 340px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 700px) {
+    main, .site-section.information {
+        padding: 1.2rem 0.5rem;
+    }
+    h1, h2 {
+        font-size: 1.3rem;
+    }
+    .img_whatsapp {
+        right: 12px;
+        bottom: 12px;
+        padding: 4px;
+    }
+    .img_whatsapp img {
+        width: 44px;
+        height: 44px;
+    }
+}

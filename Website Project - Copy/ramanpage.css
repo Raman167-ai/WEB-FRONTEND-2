@@ -1,0 +1,159 @@
+/* ramanpage.css - Modern, clean, and visually appealing styles for Ramanpage.html */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f8f8;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+header, .error h3 {
+    color: #ffb347;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    background: #fffbe6;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(255, 204, 51, 0.10);
+    margin: 2.5rem auto 2rem auto;
+    max-width: 600px;
+    padding: 2.5rem 1.5rem;
+}
+
+.error h3 {
+    color: #e67e22;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.error .link {
+    margin-top: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(255, 204, 51, 0.10);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.error .link:hover {
+    background: linear-gradient(90deg, #ffcc33 0%, #ffb347 100%);
+    color: #222;
+    transform: scale(1.04);
+}
+
+footer.footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0 1.2rem 0;
+    margin-top: 2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 0 0 12px 12px;
+}
+
+.footer h2 {
+    color: #ffb347;
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+}
+
+.footer a {
+    color: #ffb347;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.social-links a {
+    margin: 0 0.5rem;
+    color: #ffb347;
+    font-size: 1.3rem;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+/* WhatsApp Floating Button Styles */
+.img_whatsapp {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #25d366 60%, #128c7e 100%);
+    border-radius: 50%;
+    box-shadow: 0 4px 24px rgba(37, 211, 102, 0.18);
+    padding: 7px;
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_whatsapp:hover {
+    box-shadow: 0 8px 32px rgba(18, 140, 126, 0.25);
+    background: linear-gradient(135deg, #128c7e 60%, #25d366 100%);
+    transform: scale(1.07);
+}
+
+.img_whatsapp img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2.5px solid #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    transition: box-shadow 0.2s, transform 0.2s;
+    background: #fff;
+}
+
+.img_whatsapp img:hover {
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.18);
+    transform: scale(1.10);
+}
+
+@media (max-width: 700px) {
+    .img_whatsapp {
+        right: 12px;
+        bottom: 12px;
+        padding: 4px;
+    }
+    .img_whatsapp img {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 700px) {
+    .error {
+        max-width: 95vw;
+        padding: 1.2rem 0.5rem;
+    }
+    .img_whatsapp {
+        right: 10px;
+        bottom: 10px;
+    }
+}

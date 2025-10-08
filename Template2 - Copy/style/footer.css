@@ -1,0 +1,40 @@
+.footer {
+    width: 100%;
+    background: #423f3f;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0 1.2rem 0;
+    margin-top: 2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 0 0 12px 12px;
+}
+
+.footer h2 {
+    color: #ffb347;
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+}
+
+.footer a {
+    color: #ffb347;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer a:hover {
+    color: #2a09e4;
+    text-decoration: underline;
+}
+
+.social-links a {
+    width: 20px;
+    margin: 0 0.5rem;
+    color: #ffb347;
+    font-size: 1.3rem;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: #fff;
+}

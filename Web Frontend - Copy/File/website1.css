@@ -1,0 +1,505 @@
+/* Modern, clean, and responsive styles for WanderLuxe Tours website */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  color: #222;
+}
+
+header {
+  background: linear-gradient(90deg, #007bff 60%, #00c6ff 100%);
+  color: #fff;
+  padding: 24px 0 16px 0;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+ 
+}
+header div {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+nav ul li a:hover {
+  background: #fff;
+  color: #007bff;
+}
+.hero {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 80px 16px 60px 16px;
+  position: relative;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 32px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.cta {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 32px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(0,123,255,0.12);
+  transition: background 0.2s;
+}
+.cta:hover {
+  background: #0056b3;
+}
+.tours {
+  max-width: 1100px;
+  margin: 48px auto;
+  padding: 0 16px;
+}
+.tours h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 32px;
+  color: #007bff;
+}
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+.tour-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tour-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,123,255,0.12);
+}
+.tour-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+.tour-card h3 {
+  margin: 16px 0 8px 0;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+.tour-card p {
+  color: #444;
+  font-size: 1rem;
+}
+.why-us {
+  background: #eaf6ff;
+  padding: 48px 16px;
+  text-align: center;
+}
+.why-us h2 {
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+.why-us ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+.why-us ul li {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px 0;
+  box-shadow: 0 2px 8px rgba(0,123,255,0.08);
+}
+.testimonials {
+  max-width: 800px;
+  margin: 48px auto;
+  padding: 0 16px;
+  text-align: center;
+}
+.testimonials h2 {
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+blockquote {
+  background: #fff;
+  border-left: 6px solid #007bff;
+  border-radius: 12px;
+  margin: 24px auto;
+  padding: 24px 32px 16px 32px;
+  font-size: 1.1rem;
+  color: #333;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  max-width: 600px;
+}
+blockquote footer {
+  margin-top: 12px;
+  color: #007bff;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.contact {
+  background: #f7f9fc;
+  padding: 48px 16px;
+  text-align: center;
+}
+.contact h2 {
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+.contact form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact input,
+.contact textarea {
+  padding: 12px;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.2s;
+}
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.contact button {
+  background: linear-gradient(90deg, #007bff 60%, #00c6ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,123,255,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.contact button:hover {
+  background: linear-gradient(90deg, #0056b3 60%, #00aaff 100%);
+  box-shadow: 0 4px 16px rgba(0,123,255,0.12);
+}
+footer {
+  background: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 24px 0 16px 0;
+  font-size: 1rem;
+  margin-top: 48px;
+  border-radius: 0 0 16px 16px;
+}
+@media (max-width: 700px) {
+  .tour-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .tours {
+    padding: 0 4px;
+  }
+  .testimonials {
+    padding: 0 4px;
+  }
+}
+/* WanderLuxe Tours - Modern, clean, travel-inspired style */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7fafd;
+  color: #222;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 8vw 18px 8vw;
+  background: linear-gradient(90deg, #1976d2 60%, #d2691e 100%);
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10);
+}
+.logo {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+}
+nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.18s;
+}
+nav a:hover {
+  color: #ffe082;
+}
+.hero {
+  background: url('https://source.unsplash.com/1600x600/?travel,adventure') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 110px 16px 120px 16px;
+  position: relative;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  background: rgba(25, 118, 210, 0.32);
+  z-index: 1;
+}
+.hero h1, .hero p, .hero .cta {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 32px;
+}
+.cta {
+  display: inline-block;
+  background: #d2691e;
+  color: #fff;
+  padding: 14px 38px;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(210, 105, 30, 0.13);
+  transition: background 0.18s;
+}
+.cta:hover {
+  background: #1976d2;
+}
+.tours {
+  padding: 64px 8vw 32px 8vw;
+  background: #fff;
+}
+.tours h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 38px;
+  color: #1976d2;
+}
+.tour-grid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tour-card {
+  background: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10);
+  padding: 22px 18px 18px 18px;
+  width: 320px;
+  text-align: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.tour-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(25, 118, 210, 0.18);
+}
+.tour-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.tour-card h3 {
+  color: #d2691e;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+.tour-card p {
+  color: #1976d2;
+  font-size: 1.08rem;
+}
+.why-us {
+  background: #e3e9f7;
+  padding: 56px 8vw 40px 8vw;
+  text-align: center;
+}
+.why-us h2 {
+  color: #1976d2;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+.why-us ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 420px;
+}
+.why-us li {
+  font-size: 1.15rem;
+  color: #333;
+  margin-bottom: 14px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px 0;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+}
+.testimonials {
+  background: #fff;
+  padding: 56px 8vw 40px 8vw;
+  text-align: center;
+}
+.testimonials h2 {
+  color: #d2691e;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+blockquote {
+  font-size: 1.15rem;
+  color: #1976d2;
+  background: #f8fafc;
+  border-left: 5px solid #d2691e;
+  margin: 0 auto 24px auto;
+  padding: 18px 32px 14px 24px;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+}
+blockquote footer {
+  color: #333;
+  font-size: 1em;
+  margin-top: 8px;
+}
+.contact {
+  background: #e3e9f7;
+  padding: 56px 8vw 40px 8vw;
+  text-align: center;
+}
+.contact h2 {
+  color: #1976d2;
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+.contact form {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10);
+  padding: 32px 24px 24px 24px;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.contact input, .contact textarea {
+  border-radius: 8px;
+  border: 1.5px solid #b3c2d6;
+  font-size: 1em;
+  padding: 10px 12px;
+  outline: none;
+  transition: border 0.2s;
+  background: #f8fafc;
+  color: #2d3a4a;
+}
+.contact input:focus, .contact textarea:focus {
+  border: 1.5px solid #1976d2;
+  background: #f0f6ff;
+}
+.contact button {
+  background: #d2691e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.contact button:hover {
+  background: #1976d2;
+}
+footer {
+  background: #1976d2;
+  color: #fff;
+  text-align: center;
+  padding: 24px 0 18px 0;
+  font-size: 1.08rem;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+@media (max-width: 900px) {
+  header, .tours, .why-us, .testimonials, .contact {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+  .tour-grid {
+    gap: 18px;
+  }
+  .tour-card {
+    width: 90vw;
+    max-width: 340px;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 18px;
+    padding: 18px 2vw 12px 2vw;
+  }
+  .hero {
+    padding: 60px 6px 70px 6px;
+    font-size: 1.1rem;
+  }
+  .tour-card {
+    padding: 12px 6px 12px 6px;
+  }
+  .contact form {
+    padding: 18px 6px 18px 6px;
+  }
+}

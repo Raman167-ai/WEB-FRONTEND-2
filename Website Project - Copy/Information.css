@@ -1,0 +1,171 @@
+/* Information Page - Modern, clean, restaurant-inspired style */
+body {
+  background: #f7fafd;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  margin: 0;
+}
+.header, #header {
+  background: linear-gradient(90deg, #1976d2 60%, #d2691e 100%);
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10);
+  border-radius: 0 0 18px 18px;
+  padding: 0.5rem 2vw;
+}
+.logo img {
+  height: 60px;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.13);
+}
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 1.08rem;
+  margin-right: 12px;
+  transition: color 0.18s;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:focus {
+  color: #ffe082 !important;
+}
+.navbar-nav .nav-link:hover {
+  color: #d2691e !important;
+}
+.navbar-toggler {
+  border: none;
+  background: #fff;
+  border-radius: 8px;
+  padding: 6px 12px;
+  transition: background 0.18s;
+}
+.navbar-toggler:hover {
+  background: #ffe082;
+}
+.site-section, .container {
+  max-width: 1100px;
+  margin: 0 auto 48px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.08);
+  padding: 48px 0 32px 0;
+}
+.information h1 {
+  color: #1976d2;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.information h2 {
+  color: #d2691e;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+.information p {
+  color: #222;
+  font-size: 1.08rem;
+  margin-bottom: 0.7em;
+}
+.row {
+  margin-bottom: 32px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10);
+  background: #f8fafc;
+  overflow: hidden;
+}
+.row img {
+  border-radius: 0 0 0 0;
+  object-fit: cover;
+  width: 100%;
+  max-height: 260px;
+}
+.text-center {
+  text-align: center;
+}
+.p-4, .p-lg-5 {
+  padding: 2rem !important;
+}
+.border_bottom {
+  border-bottom: 2px solid #1976d2 !important;
+}
+.gift-certificates, .payment, .reservations-solution, .smoking-etiquette, .pet-lover, .personal-belongings {
+  margin-bottom: 32px;
+}
+.footer {
+  background: #1976d2;
+  color: #fff;
+  text-align: center;
+  padding: 24px 0 18px 0;
+  font-size: 1.08rem;
+  letter-spacing: 1px;
+  margin-top: 0;
+  border-radius: 0 0 18px 18px;
+}
+.footer h2 {
+  color: #ffe082;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.footer a {
+  color: #ffe082;
+  text-decoration: underline;
+}
+.footer a:hover {
+  color: #d2691e;
+}
+.social-links a {
+  margin: 0 8px;
+  color: #fff;
+  font-size: 1.3rem;
+  transition: color 0.18s;
+}
+.social-links a:hover {
+  color: #ffe082;
+}
+.img_whatsapp {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+}
+.img_whatsapp img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 18px rgba(25, 118, 210, 0.18);
+  transition: transform 0.18s;
+}
+.img_whatsapp img:hover {
+  transform: scale(1.08);
+}
+@media (max-width: 900px) {
+  .site-section, .container {
+    padding: 24px 2vw 18px 2vw;
+    max-width: 98vw;
+  }
+  .row {
+    flex-direction: column;
+    margin-bottom: 18px;
+  }
+  .p-4, .p-lg-5 {
+    padding: 1rem !important;
+  }
+}
+@media (max-width: 600px) {
+  .site-section, .container {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 12px 0 8px 0;
+  }
+  .row img {
+    max-height: 160px;
+  }
+  .img_whatsapp {
+    bottom: 12px;
+    right: 12px;
+  }
+  .img_whatsapp img {
+    width: 44px;
+    height: 44px;
+  }
+}

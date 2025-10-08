@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .menu-container{
+        width: 70%;
+        overflow: hidden;
+        margin: auto;
+        background-color: red;
+    }
+    .menu-container ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu-container ul li{
+        float: left;
+    }
+    .menu-container ul li a{
+        display: block;
+        padding: 20px;
+        text-transform:uppercase ;
+        text-decoration: none;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: white;
+    }
+    .sub-menu {
+       width:100px ; 
+       overflow: hidden;
+       background-color: green;
+       position: absolute;
+       opacity: 0;
+       transform: rotateY(20px);
+       transition: all 0.3s ease;
+    }
+    .menu-container ul li:hover .sub-menu{
+        opacity: 1;
+        transform: rotateY(0);
+    }
+</style>
+<body>
+     <div class ="menu-container">
+     <!--<ul>
+        <li>
+            <a href="#">HTML</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="https://www.w3schools.com/js/default.asp">HTML1</a></li>
+                    <li><a href="#">HTML2</a></li>
+                    <li><a href="#">HTML3</a></li>
+                </ul>
+
+            </div>
+        </li>
+      </ul> 
+      <ul>
+        <li>
+            <a href="">HTML</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="#">HTML1</a></li>
+                    <li><a href="#">HTML2</a></li>
+                    <li><a href="#">HTML3</a></li>
+                </ul>
+
+            </div>
+        </li>
+      </ul> 
+      <ul>
+        <li>
+            <a href="">HTML</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="#">HTML1</a></li>
+                    <li><a href="#">HTML2</a></li>
+                    <li><a href="#">HTML3</a></li>
+                </ul>
+
+            </div>
+        </li>
+      </ul> 
+      <ul>
+        <li>
+            <a href="">HTML</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="">HTML1</a></li>
+                    <li><a href="">HTML2</a></li>
+                    <li><a href="">HTML3</a></li>
+                </ul>
+
+            </div>
+        </li>
+      </ul> 
+      <ul>
+        <li>
+            <a href="">HTML</a>
+            <div class="sub-menu">
+                <ul>
+                    <li><a href="">HTML1</a></li>
+                    <li><a href="">HTML2</a></li>
+                    <li><a href="">HTML3</a></li>
+                </ul>
+
+            </div>
+        </li>
+      </ul>-->
+    </div>
+</body>
+<script>
+    //index array
+    // index       
+   var subject = [
+    {
+        menu:"HTML",
+        link:"https://www.w3schools.com/html/default.asp",
+        submenu:["HTML1","HTML2","HTML3"]
+    },
+    {
+        menu:"CSS",
+        link:"https://www.w3schools.com/css/default.asp",
+        submenu:["CSS1","CSS2","CSS3"]
+            
+    },
+    {
+        menu:"JS",
+        link:"https://www.w3schools.com/js/default.asp",
+        submenu:["JS1","JS2","JS3"]
+            
+    },
+    {
+        menu:"PHP",
+        link:"https://www.w3schools.com/php/default.asp",
+        submenu:["PHP1", "PHP2", "PHP3"]
+    },
+    {
+        menu:"MYSQL",
+        link:"https://www.w3schools.com/sql/default.asp",
+        submenu:["MYSQL1", "MYSQL2", "MYSQL3"]
+            
+    },
+    {
+        menu:"PYTHON",
+        link:"https://www.w3schools.com/python/default.asp",
+        submenu:["PYTHON1", "PYTHON2", "PYTHON3"]
+    
+    },
+    {
+        menu:"JAVA",
+        link:"https://www.w3schools.com/java/default.asp",
+        submenu:["JAVA1","JAVA2","JAVA3"]
+            
+    },
+    {
+        menu:"C++",
+        link:"https://www.w3schools.com/cpp/default.asp",
+        submenu:["C++1", "C++2", "C++3"]
+            
+    },
+     {
+        menu:"HOW TO",
+        link:"https://www.w3schools.com/howto/default.asp",
+        submenu:["HOW TO1", "HOW TO2", "HOW TO3"]
+           
+    },
+];
+    var item ="";
+    for(var i=0; i<subject.length ; i++){
+        var submenulist= subject[i].submenu;// Loop through the submenu array html1, html2, html3
+        var obj = "";
+        for (var j=0 ; j<submenulist.length ; j++){
+        
+
+           //console.log(submenulist[j]); }
+            obj = obj + `
+              <li>
+              <a href="#">${submenulist[j]}</a>
+              </li>
+            `;
+        }
+        console.log(obj);
+        //loop item menu
+            item = item + `
+            <li>
+            <a href="${subject[i].link}">${subject[i].menu}</a>
+            <div class="sub-menu">
+                <ul>
+                    ${obj}
+                </ul>
+
+            </div>
+        </li>
+        
+        `;
+       //console.log(item)
+        
+    }
+    //return the item to the menu container
+    document.querySelector(".menu-container").innerHTML = `<ul>${item}</ul>`;
+   </script>
+</html>

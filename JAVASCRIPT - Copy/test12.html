@@ -1,0 +1,112 @@
+<table border="1"><!--cellpadding="5" cellspacing="0">-->
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Date of Birth</th>
+    </tr>
+    <tbody id ="result">
+    <!-- <tr>
+        <td>John</td>
+        <td>30</td>
+        <td>New York</td>
+        <td>010228595</td>
+        <td>2025-01-01</td>
+    </tr>
+    <tr>
+        <td>Mike</td>
+        <td>35</td>
+        <td>Chicago</td>
+        <td>010987654</td>
+        <td>2023-12-31</td>
+    </tr>
+    
+    <tr>
+        <td>Sara</td>
+        <td>28</td>
+        <td>Miami</td>
+        <td>010555555</td>
+        <td>2022-07-20</td>
+    </tr>-->
+    </tbody>
+</table>
+
+<script>
+    //object
+    // Object literal syntax
+var person = {
+    name: "John",
+    age: 30,
+    Address: "New York",
+    phone: 010228595,
+    dob:"2025-01-01"
+
+}
+//console.log(person.name);
+
+
+// Array of objects
+   var people = [
+    {
+            name: "JaneJonh",
+            age: 25,
+            Address: "Los Angeles",
+            phone: 010123456,
+            dob:"2024-05-15"
+        },
+        {
+            name: "MikeMary",
+            age: 35,
+            Address: "Chicago",
+            phone: 010987654,
+            dob:"2023-12-31"
+        },
+        {
+            name: "MikeMary",
+            age: 35,
+            Address: "Chicago",
+            phone: 010987654,
+            dob:"2023-12-31"
+        },
+        {
+            name: "Miky",
+            age: 35,
+            Address: "Chicago",
+            phone: 010987654,
+            dob:"2023-12-31"
+        },
+        
+        {
+            name: "Saraudon",
+            age: 28,
+            Address: "Miami",
+            phone: 010555555,
+            dob:"2022-07-20"
+    },
+     {
+            name: "jonh smith",
+            age: 28,
+            Address: "Miami",
+            phone: 010555555,
+            dob:"2022-07-20"
+    }
+     
+   ]
+//console.log(people[1].name);// Loop through the array of objects
+//for (var i = 0; i<people.length; i++){
+  //  console.table(people[i]);
+//}
+var item = "";
+for (var i = 0; i<people.length; i++) {
+    item += `
+    <tr>
+        <td>${people[i].name}</td>
+        <td>${people[i].age}</td>
+        <td>${people[i].Address}</td>
+        <td>${people[i].phone}</td>
+        <td>${people[i].dob}</td>
+    </tr>`;
+}
+document.getElementById("result").innerHTML = item;
+</script>
